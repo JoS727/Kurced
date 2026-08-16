@@ -11,4 +11,28 @@
 <article id="08"><p class="post-meta">08 / THE COUNTDOWN</p><h2>SEPTEMBER IS <em>CALLING.</em></h2><p>I can feel the countdown in everything now. In every draft. Every rehearsal. Every moment I almost reveal more than I should. The debut album is getting closer, and I am trying very hard not to leak the entire thing from pure excitement.</p><p>Stay close. The first warning is coming soon.</p></article>
 <article id="09"><p class="post-meta">09 / THE PROMISE</p><h2>I'M NOT PLAYING IT <em>SAFE.</em></h2><p>I didn't make this record to be background noise. I made it for car rides after midnight, mirrors before going out, headphones under blankets, and every moment you need something to say what you cannot.</p><p>It is dramatic. It is tender. It is a little cursed. Just like me.</p></article>
 <article id="10"><p class="post-meta">10 / THE BEGINNING</p><h2>THIS IS ONLY THE <em>FIRST CHAPTER.</em></h2><p>My first album arrives in September 2026. That sentence still makes my heart beat too fast. I hope you are ready to fall into this world with me.</p><p>Thank you for being here before the beginning even begins.</p><a class="cta" href="index.html#updates">STAY CURSED <b>→</b></a></article>
-</main><footer><span>© <span id="year"></span> KURCED</span><nav><a href="index.html">HOME</a><a href="#01">TOP</a></nav></footer><script src="script.js?v=20260725-1848"></script></body></html>
+</main><footer><span>© <span id="year"></span> KURCED</span><nav><a href="index.html">HOME</a><a href="#01">TOP</a></nav></footer><script src="script.js?v=20260725-1848"></script>
+<script>
+document.querySelectorAll('form').forEach(function(form){
+  if(form.dataset.wired) return;
+  form.dataset.wired='1';
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    var emailInput=form.querySelector('input[type=email]')||form.querySelector('input[name=email]');
+    var nameInput=form.querySelector('input[name=name]')||form.querySelector('input[name=first_name]');
+    var phoneInput=form.querySelector('input[name=phone]')||form.querySelector('input[type=tel]');
+    if(!emailInput||!emailInput.value){alert('Please enter your email.');return;}
+    var btn=form.querySelector('button[type=submit]')||form.querySelector('button');
+    var origText=btn?btn.textContent:'';
+    if(btn){btn.textContent='...';btn.disabled=true;}
+    try{
+      var r=await fetch('https://email-capture.calitoy.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:emailInput.value,name:nameInput?nameInput.value:'',phone:phoneInput?phoneInput.value:'',source:'kurced.com'})});
+      var d=await r.json();
+      if(d.success){form.innerHTML='<p style="text-align:center;padding:20px;font-size:1.1em;color:var(--pink);">You are in. Stay cursed.</p>';}
+      else{alert(d.error||'Something went wrong.');if(btn){btn.textContent=origText;btn.disabled=false;}}
+    }catch(err){alert('Network error.');if(btn){btn.textContent=origText;btn.disabled=false;}}
+  });
+});
+</script>
+
+</body></html>
