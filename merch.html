@@ -1,26 +1,67 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09030e"><meta name="description" content="Kurced official merch — the first drop from the debut album era."><title>Merch — Kurced</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=20260728-0826"></head><body><div class="noise"></div><header class="journal-nav"><a class="logo" href="index.html">KURCED</a><nav><a href="about.html">ABOUT</a><a href="visuals.html">VISUALS</a><a href="lyrics.html">LYRICS</a><a href="index.html#updates">STAY CURSED ↗</a></nav></header><main class="merch-page"><section class="merch-hero"><p class="eyebrow">KURCED / OFFICIAL GOODS / FIRST DROP</p><h1>WEAR THE<br><em>AFTERMATH.</em></h1><p>Five pieces from the debut era. Black, bruised, and built around the songs that started it.</p><a class="cta" href="#drop">SEE THE DROP ↓</a></section><section class="merch-note"><div class="section-label">01 / THE FIRST DROP</div><p>Official Kurced goods are in the works. Join the list for release timing and first access—no invented checkout links, no false “sold out” theater.</p></section><section class="product-grid" id="drop"><article class="product-card"><img src="assets/covers/locked-out.jpg" alt="Locked Out official cover art"><div><span>01 / BLACK TEE</span><h2>LOCKED<br><em>OUT.</em></h2><p>$32</p></div></article><article class="product-card"><img src="assets/covers/all-american-boys.jpg" alt="All-American Boys official cover art"><div><span>02 / BLACK TEE</span><h2>ALL-AMERICAN<br><em>BOYS.</em></h2><p>$32</p></div></article><article class="product-card"><img src="assets/covers/overdose.jpg" alt="Overdose official cover art"><div><span>03 / 10 × 10 MATTE POSTER</span><h2>OVER-<br><em>DOSE.</em></h2><p>$24</p></div></article><article class="product-card"><img src="assets/covers/last-seen.jpg" alt="Last Seen official cover art"><div><span>04 / BLACK HOODIE</span><h2>LAST<br><em>SEEN.</em></h2><p>$62</p></div></article><article class="product-card"><img src="assets/covers/medicine.jpg" alt="Medicine official cover art"><div><span>05 / BLACK TOTE</span><h2>MEDI-<br><em>CINE.</em></h2><p>$30</p></div></article></section><section class="merch-cta"><p class="eyebrow">FIRST ACCESS / MERCH + ALBUM NEWS</p><h2>DON’T GET<br><em>LOCKED OUT.</em></h2><p>Get the signal before the first drop disappears.</p><a class="cta" href="index.html#updates">JOIN THE LIST →</a></section></main><footer><span>© <span id="year"></span> KURCED</span><nav><a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="lyrics.html">LYRICS</a><a href="https://www.instagram.com/KurcedGrl/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></nav></footer><script src="script.js?v=20260726-0930"></script>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09030e"><meta name="description" content="Kurced official merch. The first drop from the debut album era. Buy with Stripe, Cash App, or Venmo."><title>Merch — Kurced</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=20260821"><link rel="icon" type="image/png" href="assets/kurced-favicon.png"><meta property="og:title" content="Kurced Merch — The First Drop"><meta property="og:description" content="Official Kurced goods from the debut era."><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Kurced Merch","description":"Official Kurced merchandise from the debut album era","url":"https://kurced.com/merch.html","priceRange":"$24-$62","paymentAccepted":"Stripe, Cash App, Venmo, Zelle"}</script><style>
+.pay-section{margin:32px 0;padding:20px;border:1px solid rgba(255,255,255,0.08);border-radius:4px;background:rgba(255,255,255,0.02)}
+.pay-label{font-family:DM Mono,monospace;font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:10px}
+.pay-row{display:flex;flex-wrap:wrap;gap:8px}
+.pay-chip{font-family:DM Sans,sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.05em;color:rgba(255,255,255,0.7);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:10px 18px;cursor:pointer;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:all 0.2s;border-radius:2px}
+.pay-chip:hover{border-color:#c9a96e;color:#c9a96e}
+.pay-chip.stripe{background:#c9a96e;color:#09030e;border-color:#c9a96e;font-weight:700}
+.pay-chip.stripe:hover{background:#8a7449}
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal-card{background:#0d0810;border:1px solid rgba(201,169,110,0.2);border-radius:8px;max-width:500px;width:100%;padding:28px}
+.modal-card h3{font-family:Playfair Display,serif;font-size:1.4rem;margin-bottom:8px}
+.modal-card .price{font-family:DM Mono,monospace;font-size:1.8rem;color:#c9a96e;margin-bottom:16px}
+.modal-card p{color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.5;margin-bottom:16px}
+.modal-card .details{border-top:1px solid rgba(255,255,255,0.05);padding-top:12px;margin-bottom:16px;font-size:0.8rem;color:rgba(255,255,255,0.5)}
+.modal-card .details strong{color:#c9a96e}
+.buy-btn{display:inline-block;background:#c9a96e;color:#09030e;padding:12px 28px;font-family:DM Mono,monospace;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;text-decoration:none;margin-top:8px}
+.buy-btn:hover{background:#8a7449}
+.close-btn{float:right;color:rgba(255,255,255,0.4);background:none;border:none;font-size:1.5rem;cursor:pointer}
+.product-card{cursor:pointer;transition:transform 0.3s}
+.product-card:hover{transform:translateY(-4px)}
+.product-card .buy-hint{font-family:DM Mono,monospace;font-size:0.6rem;color:#c9a96e;letter-spacing:0.15em;text-transform:uppercase;margin-top:6px;opacity:0;transition:opacity 0.2s}
+.product-card:hover .buy-hint{opacity:1}
+@media(max-width:768px){.pay-row{justify-content:center}}
+</style></head>
+<body><div class="noise"></div>
+<header class="journal-nav"><a class="logo" href="index.html">KURCED</a><nav><a href="about.html">ABOUT</a><a href="visuals.html">VISUALS</a><a href="lyrics.html">LYRICS</a><a href="merch.html" style="color:#c9a96e">MERCH</a><a href="index.html#updates">STAY CURSED ↗</a></nav></header>
+<main class="merch-page">
+<section class="merch-hero"><p class="eyebrow">KURCED / OFFICIAL GOODS / FIRST DROP</p><h1>WEAR THE<br><em>AFTERMATH.</em></h1><p>Five pieces from the debut era. Black, bruised, and built around the songs that started it.</p><a class="cta" href="#drop">SEE THE DROP ↓</a></section>
+<section class="product-grid" id="drop">
+<article class="product-card" onclick="openProduct('Locked Out','Black Tee','$32','assets/covers/locked-out.jpg','Locked Out from the debut era. Black cotton tee with Kurced cover art print. Unisex sizing.','price_1U4xwrISCKHDtOuFf9uj4gR5','BLACK TEE / COTTON')"><img src="assets/covers/locked-out.jpg" alt="Locked Out"><div><span>01 / BLACK TEE</span><h2>LOCKED<br><em>OUT.</em></h2><p>$32</p><div class="buy-hint">TAP TO BUY</div></div></article>
+<article class="product-card" onclick="openProduct('All-American Boys','Black Tee','$32','assets/covers/all-american-boys.jpg','All-American Boys from the debut era. Black cotton tee with Kurced cover art print. Unisex sizing.','price_1U4xwrISCKHDtOuFwJP3dlNz','BLACK TEE / COTTON')"><img src="assets/covers/all-american-boys.jpg" alt="All-American Boys"><div><span>02 / BLACK TEE</span><h2>ALL-AMERICAN<br><em>BOYS.</em></h2><p>$32</p><div class="buy-hint">TAP TO BUY</div></div></article>
+<article class="product-card" onclick="openProduct('Overdose','10x10 Matte Poster','$24','assets/covers/overdose.jpg','Overdose from the debut era. 10x10 matte poster print with Kurced cover art. Frame-ready.','price_1U4xwsISCKHDtOuFD4VzB0UD','POSTER / 10x10 MATTE')"><img src="assets/covers/overdose.jpg" alt="Overdose"><div><span>03 / 10x10 MATTE POSTER</span><h2>OVER-<br><em>DOSE.</em></h2><p>$24</p><div class="buy-hint">TAP TO BUY</div></div></article>
+<article class="product-card" onclick="openProduct('Last Seen','Black Hoodie','$62','assets/covers/last-seen.jpg','Last Seen from the debut era. Black heavyweight hoodie with Kurced cover art. Unisex sizing.','price_1U4xwsISCKHDtOuFbnReedWh','HOODIE / HEAVYWEIGHT')"><img src="assets/covers/last-seen.jpg" alt="Last Seen"><div><span>04 / BLACK HOODIE</span><h2>LAST<br><em>SEEN.</em></h2><p>$62</p><div class="buy-hint">TAP TO BUY</div></div></article>
+<article class="product-card" onclick="openProduct('Medicine','Black Tote','$30','assets/covers/medicine.jpg','Medicine from the debut era. Black canvas tote with Kurced cover art print. One size.','price_1U4xwsISCKHDtOuFgCWSJ5d5','TOTE / CANVAS')"><img src="assets/covers/medicine.jpg" alt="Medicine"><div><span>05 / BLACK TOTE</span><h2>MEDI-<br><em>CINE.</em></h2><p>$30</p><div class="buy-hint">TAP TO BUY</div></div></article>
+</section>
+<div class="pay-section"><div class="pay-label">PAYMENT / ALL PRODUCTS</div><div class="pay-row"><span class="pay-chip" style="background:#c9a96e;color:#09030e">STRIPE CARD</span><a class="pay-chip" href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a><a class="pay-chip" href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a><button class="pay-chip" onclick="copyText('joseph@xcalitoy.com')">ZELLE</button></div><p style="font-size:0.65rem;color:rgba(255,255,255,0.3);margin-top:8px">Tap any product to checkout with Stripe card or pay via Cash App, Venmo, or Zelle with the product name in the note.</p></div>
+<section class="merch-cta"><p class="eyebrow">FIRST ACCESS / MERCH + ALBUM NEWS</p><h2>DON'T GET<br><em>LOCKED OUT.</em></h2><p>Get the signal before the next drop disappears.</p><form onsubmit="return false" style="max-width:400px;margin:1rem auto"><input type="email" placeholder="you@example.com" required style="width:100%;padding:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:DM Mono,monospace;font-size:0.8rem;margin-bottom:8px"><button type="submit" style="width:100%;padding:12px;background:#c9a96e;color:#09030e;font-family:DM Mono,monospace;font-size:0.7rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;border:none;cursor:pointer">JOIN THE LIST</button></form></section>
+</main>
+<footer><span>(c) <span id="year"></span> KURCED</span><nav><a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="lyrics.html">LYRICS</a><a href="https://www.instagram.com/KurcedGrl/" target="_blank" rel="noopener noreferrer">INSTAGRAM</a></nav></footer>
 <script>
-document.querySelectorAll('form').forEach(function(form){
-  if(form.dataset.wired) return;
-  form.dataset.wired='1';
-  form.addEventListener('submit',async function(e){
-    e.preventDefault();
-    var emailInput=form.querySelector('input[type=email]')||form.querySelector('input[name=email]');
-    var nameInput=form.querySelector('input[name=name]')||form.querySelector('input[name=first_name]');
-    var phoneInput=form.querySelector('input[name=phone]')||form.querySelector('input[type=tel]');
-    if(!emailInput||!emailInput.value){alert('Please enter your email.');return;}
-    var btn=form.querySelector('button[type=submit]')||form.querySelector('button');
-    var origText=btn?btn.textContent:'';
-    if(btn){btn.textContent='...';btn.disabled=true;}
-    try{
-      var r=await fetch('https://email-capture.calitoy.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:emailInput.value,name:nameInput?nameInput.value:'',phone:phoneInput?phoneInput.value:'',source:'kurced.com'})});
-      var d=await r.json();
-      if(d.success){form.innerHTML='<p style="text-align:center;padding:20px;font-size:1.1em;color:var(--pink);">You are in. Stay cursed.</p>';}
-      else{alert(d.error||'Something went wrong.');if(btn){btn.textContent=origText;btn.disabled=false;}}
-    }catch(err){alert('Network error.');if(btn){btn.textContent=origText;btn.disabled=false;}}
-  });
-});
+document.getElementById('year').textContent=new Date().getFullYear();
+function copyText(t){navigator.clipboard.writeText(t);alert('Copied: '+t)}
+function openProduct(name,cat,price,img,desc,priceId,spec){
+var overlay=document.createElement('div');overlay.className='modal-overlay';overlay.onclick=function(){this.remove()};
+var card=document.createElement('div');card.className='modal-card';card.onclick=function(e){e.stopPropagation()};
+card.innerHTML='<button class="close-btn" onclick="this.parentElement.parentElement.remove()">x</button>'+
+'<img src="'+img+'" alt="'+name+'" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:4px;margin-bottom:16px">'+
+'<h3>'+name+'</h3>'+
+'<div class="price">'+price+'</div>'+
+'<p>'+desc+'</p>'+
+'<div class="details"><div style="margin-bottom:4px"><strong>Type:</strong> '+cat+'</div><div><strong>Spec:</strong> '+spec+'</div></div>'+
+'<div class="pay-label" style="margin-top:16px">PAY WITH</div>'+
+'<div class="pay-row" style="margin-bottom:12px">'+
+'<button class="pay-chip stripe" onclick="stripeBuy(\''+priceId+'\',\''+name+'\')">CARD (STRIPE)</button>'+
+'<a class="pay-chip" href="https://cash.app/$Joss3p" target="_blank" rel="noreferrer">CASH APP</a>'+
+'<a class="pay-chip" href="https://venmo.com/thatjoemad" target="_blank" rel="noreferrer">VENMO</a>'+
+'<button class="pay-chip" onclick="copyText(\'joseph@xcalitoy.com\')">ZELLE</button>'+
+'</div>'+
+'<p style="font-size:0.6rem;color:rgba(255,255,255,0.3)">Card payment via Stripe. Or send payment with the product name in the note.</p>';
+overlay.appendChild(card);document.body.appendChild(overlay)}
+async function stripeBuy(priceId,productName){
+try{var r=await fetch('https://email-capture.calitoy.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({type:'checkout',priceId:priceId,productName:productName,brand:'kurced'})});var d=await r.json();if(d.url){window.location.href=d.url}else{alert('Checkout error. Try Cash App or Venmo.')}}catch(e){alert('Checkout unavailable. Use Cash App or Venmo.')}}
+document.querySelector('form').addEventListener('submit',async function(e){e.preventDefault();var email=this.querySelector('input');if(!email.value)return;var btn=this.querySelector('button');var orig=btn.textContent;btn.textContent='...';btn.disabled=true;try{var r=await fetch('https://email-capture.calitoy.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email.value,source:'kurced-merch'})});var d=await r.json();if(d.success){this.innerHTML='<p style="text-align:center;color:#c9a96e;padding:20px">You are in. Welcome.</p>'}else{alert(d.error||'Error');btn.textContent=orig;btn.disabled=false}}catch(err){alert('Network error');btn.textContent=orig;btn.disabled=false}});
+fetch('https://analytics.calitoy.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({path:'/merch.html',site:'kurced.com',title:'Kurced Merch'})}).catch(function(){});
 </script>
-
 </body></html>
